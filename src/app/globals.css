@@ -101,6 +101,7 @@ main {
 .btn-primary {
   background-color: var(--primary);
   color: white;
+  border: none;
 }
 
 .btn-primary:hover {
@@ -109,8 +110,8 @@ main {
 
 .btn-outline {
   background-color: transparent;
-  border: 1px solid var(--text-secondary);
-  color: var(--text);
+  border: 1px solid currentColor;
+  color: inherit;
 }
 
 .btn-outline:hover {
@@ -224,14 +225,22 @@ main {
 
 /* Header and navigation */
 .nav-header {
-  background-color: var(--surface);
+  background-color: white;
   border-bottom: 1px solid var(--text-secondary);
   @apply fixed w-full z-10;
+}
+
+[data-theme='dark'] .nav-header {
+  background-color: var(--surface);
 }
 
 /* Hero section */
 .hero-section {
   background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: var(--text);
+}
+
+.dark .hero-section {
   color: white;
 }
 
@@ -244,6 +253,6 @@ main {
 
 .feature-card {
   background-color: var(--surface);
-  color: var(--text);
+  color: var (--text);
   @apply p-6 rounded-lg transition-all duration-200 hover:shadow-lg;
 }

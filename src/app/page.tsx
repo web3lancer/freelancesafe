@@ -21,32 +21,32 @@ const HomePage = () => {
       {/* Hero Section */}
       <section className="section relative">
         <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-90"></div>
-        <header className="relative top-header bg-white/95 dark:bg-dark-paper/95">
-          <h1 className="text-2xl font-bold text-primary dark:text-white">FreelanceSafe</h1>
+        <header className="relative top-header">
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-white">FreelanceSafe</h1>
           <div className="flex gap-2">
-            <button onClick={toggleTheme} className="btn btn-outline">
+            <button onClick={toggleTheme} className="btn btn-outline text-gray-900 dark:text-white">
               {theme === 'light' ? '🌙' : '☀️'}
             </button>
             <Link href="/auth/signin">
-              <button className="btn btn-outline">Sign In</button>
+              <button className="btn btn-outline text-gray-900 dark:text-white">Sign In</button>
             </Link>
             <Link href="/auth/signup">
-              <button className="btn btn-primary">Sign Up</button>
+              <button className="btn btn-primary text-white">Sign Up</button>
             </Link>
           </div>
         </header>
         
         <div className="relative p-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl font-bold mb-6 text-white">
+            <h1 className="text-5xl font-bold mb-6 text-gray-900 dark:text-white">
               Secure Freelance Payments & Escrow Management
             </h1>
-            <p className="text-xl mb-8 text-white/90">
+            <p className="text-xl mb-8 text-gray-700 dark:text-white/90">
               FreelanceSafe provides a secure platform for managing freelance payments
               with built-in escrow protection.
             </p>
             <Link href="/auth/signup">
-              <button className="btn btn-primary bg-white text-primary hover:bg-white/90 text-lg px-8 py-3">
+              <button className="btn btn-primary text-white hover:bg-primary-dark text-lg px-8 py-3">
                 Get Started
               </button>
             </Link>
