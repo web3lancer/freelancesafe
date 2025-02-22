@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import ThemeSwitcher from '@/components/ThemeSwitcher';
 
 const HomePage = () => {
   const [theme, setTheme] = useState('light');
@@ -36,7 +37,7 @@ const HomePage = () => {
         
         <main className="p-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl font-bold mb-6">
+            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary inline-block text-transparent bg-clip-text">
               Secure Freelance Payments & Escrow Management
             </h1>
             <p className="text-xl mb-8">
@@ -114,6 +115,27 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      {/* New Stats Section */}
+      <section className="section bg-paper dark:bg-dark-paper">
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {[
+              { label: 'Active Users', value: '10,000+' },
+              { label: 'Total Transactions', value: '$5M+' },
+              { label: 'Success Rate', value: '99.9%' },
+              { label: 'Countries', value: '50+' },
+            ].map((stat) => (
+              <div key={stat.label} className="text-center">
+                <div className="text-3xl font-bold text-primary mb-2">{stat.value}</div>
+                <div className="text-text-secondary dark:text-dark-text-secondary">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <ThemeSwitcher />
     </div>
   );
 };

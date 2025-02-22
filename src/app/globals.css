@@ -5,7 +5,9 @@
 /* Base styles */
 :root {
   --primary: #2196f3;
+  --primary-dark: #1976d2;
   --secondary: #f50057;
+  --secondary-dark: #c51162;
   --background: #fafafa;
   --paper: #ffffff;
   --text-primary: rgba(0, 0, 0, 0.87);
@@ -15,6 +17,10 @@
   --dark-paper: #1e1e1e;
   --dark-text-primary: rgba(255, 255, 255, 0.87);
   --dark-text-secondary: rgba(255, 255, 255, 0.6);
+  --success: #4caf50;
+  --error: #f44336;
+  --warning: #ff9800;
+  --info: #2196f3;
 }
 
 [data-theme='dark'] {
@@ -22,6 +28,7 @@
   --paper: var(--dark-paper);
   --text-primary: var(--dark-text-primary);
   --text-secondary: var(--dark-text-secondary);
+  color-scheme: dark;
 }
 
 body {
@@ -109,9 +116,26 @@ main {
   border: none;
 }
 
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+}
+
 .btn-outline {
   border: 1px solid #d1d5db;
   background-color: white;
+}
+
+.btn-outline:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+[data-theme='dark'] .btn-outline {
+  border-color: rgba(255, 255, 255, 0.23);
+  color: var(--dark-text-primary);
+}
+
+[data-theme='dark'] .btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
 /* Material Design shadows */
@@ -150,3 +174,26 @@ main {
   font-size: 12px;
   font-weight: 500;
 }
+
+.theme-switch {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 100;
+  padding: 1rem;
+  border-radius: 50%;
+  background: var(--paper);
+  box-shadow: var(--elevation-2);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.theme-switch:hover {
+  transform: scale(1.1);
+}
+
+/* Add status colors */
+.status-pending { color: var(--warning); }
+.status-completed { color: var(--success); }
+.status-failed { color: var(--error); }
+.status-processing { color: var(--info); }
