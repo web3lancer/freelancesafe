@@ -10,7 +10,7 @@ FreelanceSafe is a modular and practical system for freelance payments and escro
 
 ## Structure 🏗️
 
-- 🐍 Python CLI (Core SDK & Appwrite Proxy Client)
+- 🐍 Python CLI (Core SDK & Next.js Proxy API)
 - 🌐 Next.js Web App (Frontend Client & CLI Proxy API)
 - 📱 Flutter Mobile/Desktop App (Frontend Client)
 
