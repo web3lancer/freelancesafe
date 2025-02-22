@@ -57,7 +57,12 @@
   }
 
   .btn-outline {
-    @apply border border-text/20 text-text hover:bg-text/5;
+    @apply border text-text transition-colors;
+    border-color: var(--text-secondary);
+  }
+
+  .btn-outline:hover {
+    background-color: var(--surface);
   }
 
   .card {
@@ -74,7 +79,8 @@
   }
 
   .nav-header {
-    @apply sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-text/10;
+    @apply sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b;
+    border-color: rgba(0, 0, 0, 0.1);
   }
 
   .hero-content {
