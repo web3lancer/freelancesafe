@@ -78,7 +78,7 @@ const HomePage = () => {
             <div className="bg-paper p-8 rounded-lg elevation-1 dark:bg-dark-paper dark:elevation-1">
               <h3 className="text-xl font-bold mb-4">CLI Setup 🐍</h3>
               <pre className="bg-gray-900 text-white p-4 rounded text-sm">
-                {`git clone freelancesafe
+                {`git clone https://github.com/web3lancer/freelancesafe
 cd freelancesafe/cli
 pip install -e .`}
               </pre>
