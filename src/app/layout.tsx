@@ -1,22 +1,17 @@
 import React from 'react';
+import './globals.css';
 
-const Layout = ({ children }) => {
+export const metadata = {
+  title: 'FreelanceSafe - Secure Freelance Payments',
+  description: 'Secure platform for freelance payments and escrow management',
+};
+
+const RootLayout = ({ children }) => {
   return (
     <html lang="en">
-      <head>
-        <title>FreelanceSafe</title>
-      </head>
-      <body>
-        <header>
-          <h1>FreelanceSafe</h1>
-        </header>
-        <main>{children}</main>
-        <footer>
-          <p>&copy; 2023 FreelanceSafe. All rights reserved.</p>
-        </footer>
-      </body>
+      <body>{children}</body>
     </html>
   );
 };
 
-export default Layout;
+export default RootLayout;
