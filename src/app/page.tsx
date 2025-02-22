@@ -134,24 +134,14 @@ flutter run`}
         </div>
       </section>
 
-      {/* New Stats Section */}
-      <section className="section bg-paper dark:bg-dark-paper">
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              { label: 'Active Users', value: '10,000+' },
-              { label: 'Total Transactions', value: '$5M+' },
-              { label: 'Success Rate', value: '99.9%' },
-              { label: 'Countries', value: '50+' },
-            ].map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">{stat.value}</div>
-                <div className="text-text-secondary dark:text-dark-text-secondary">{stat.label}</div>
-              </div>
-            ))}
-          </div>
+      {/* Footer Section */}
+      <footer className="section bg-paper dark:bg-dark-paper">
+        <div className="container text-center">
+          <p className="text-text-secondary dark:text-dark-text-secondary">
+            &copy; {new Date().getFullYear()} FreelanceSafe. All rights reserved.
+          </p>
         </div>
-      </section>
+      </footer>
 
       <ThemeSwitcher />
     </div>
