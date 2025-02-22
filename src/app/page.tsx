@@ -6,47 +6,40 @@ import Image from 'next/image';
 import ThemeSwitcher from '@/components/ThemeSwitcher';
 
 const HomePage = () => {
-  const [theme, setTheme] = useState('light');
-
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
-  };
+  const { theme, toggleTheme } = useTheme();
 
   return (
-    <div className="min-h-screen bg-background text-text-primary dark:bg-dark-background dark:text-dark-text-primary">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="section relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-90"></div>
-        <header className="relative top-header">
-          <h1 className="text-2xl font-bold text-gray-900 dark:text-white">FreelanceSafe</h1>
-          <div className="flex gap-2">
-            <button onClick={toggleTheme} className="btn btn-outline text-gray-900 dark:text-white">
-              {theme === 'light' ? '🌙' : '☀️'}
-            </button>
-            <Link href="/auth/signin">
-              <button className="btn btn-outline text-gray-900 dark:text-white">Sign In</button>
-            </Link>
-            <Link href="/auth/signup">
-              <button className="btn btn-primary text-white">Sign Up</button>
-            </Link>
+      <section className="section-gradient">
+        <header className="nav-header">
+          <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 className="text-2xl font-bold text-text">FreelanceSafe</h1>
+            <div className="flex items-center gap-4">
+              <button onClick={toggleTheme} className="btn btn-outline">
+                {theme === 'light' ? '🌙' : '☀️'}
+              </button>
+              <Link href="/auth/signin">
+                <button className="btn btn-outline">Sign In</button>
+              </Link>
+              <Link href="/auth/signup">
+                <button className="btn btn-primary">Sign Up</button>
+              </Link>
+            </div>
           </div>
         </header>
         
-        <div className="relative p-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+        <div className="container mx-auto px-6 py-20">
+          <div className="hero-content max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl font-bold mb-6">
               Secure Freelance Payments & Escrow Management
             </h1>
-            <p className="text-xl mb-8 text-gray-700 dark:text-white/90">
+            <p className="text-xl mb-8 text-white/90">
               FreelanceSafe provides a secure platform for managing freelance payments
               with built-in escrow protection.
             </p>
             <Link href="/auth/signup">
-              <button className="btn btn-primary text-white hover:bg-primary-dark text-lg px-8 py-3">
+              <button className="btn btn-primary text-lg px-8 py-3">
                 Get Started
               </button>
             </Link>
