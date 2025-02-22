@@ -80,7 +80,6 @@
 
   .nav-header {
     @apply sticky top-0 z-50 bg-background bg-opacity-95 backdrop-blur-sm border-b;
-    /* Using bg-background and bg-opacity-95 instead of bg-background/95 */
     border-color: rgba(0, 0, 0, 0.1);
   }
 
