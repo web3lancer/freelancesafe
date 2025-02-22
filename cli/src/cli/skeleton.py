@@ -23,6 +23,7 @@ References:
 import argparse
 import logging
 import sys
+import requests
 
 from cli import __version__
 
@@ -54,6 +55,48 @@ def fib(n):
     for _i in range(n - 1):
         a, b = b, a + b
     return a
+
+
+def deploy_contract(contract_type, contract_path, network, deployer_private_key):
+    # Cardano Smart Contract Deployment Logic
+    # ...existing code...
+    # Call Next.js Proxy API to Register Contract
+    response = requests.post('http://localhost:3000/api/proxy/contract/deploy', json={
+        'contract_type': contract_type,
+        'contract_path': contract_path,
+        'network': network,
+        'deployer_private_key': deployer_private_key
+    })
+    return response.json()
+
+def create_escrow(freelancer_id, client_id, description, amount, currency):
+    # Call Next.js Proxy API - Create Escrow
+    response = requests.post('http://localhost:3000/api/proxy/escrow/create', json={
+        'freelancer_id': freelancer_id,
+        'client_id': client_id,
+        'description': description,
+        'amount': amount,
+        'currency': currency
+    })
+    return response.json()
+
+def get_escrow(escrow_id):
+    # Call Next.js Proxy API - Get Escrow
+    response = requests.get(f'http://localhost:3000/api/proxy/escrow/get?escrow_id={escrow_id}')
+    return response.json()
+
+def update_escrow_status(escrow_id, status):
+    # Call Next.js Proxy API - Update Escrow Status
+    response = requests.post('http://localhost:3000/api/proxy/escrow/update-status', json={
+        'escrow_id': escrow_id,
+        'status': status
+    })
+    return response.json()
+
+def list_user_escrows(user_id):
+    # Call Next.js Proxy API - List User Escrows
+    response = requests.get(f'http://localhost:3000/api/proxy/escrow/list-user?user_id={user_id}')
+    return response.json()
 
 
 # ---- CLI ----
@@ -125,6 +168,23 @@ def main(args):
     _logger.debug("Starting crazy calculations...")
     print(f"The {args.n}-th Fibonacci number is {fib(args.n)}")
     _logger.info("Script ends here")
+
+    if args.command == 'deploy-contract':
+        result = deploy_contract(args.contract_type, args.contract_path, args.network, args.deployer_private_key)
+        print(result)
+    elif args.command == 'escrow':
+        if args.subcommand == 'create':
+            result = create_escrow(args.freelancer_id, args.client_id, args.description, args.amount, args.currency)
+            print(result)
+        elif args.subcommand == 'get':
+            result = get_escrow(args.escrow_id)
+            print(result)
+        elif args.subcommand == 'update-status':
+            result = update_escrow_status(args.escrow_id, args.status)
+            print(result)
+        elif args.subcommand == 'list-user':
+            result = list_user_escrows(args.user_id)
+            print(result)
 
 
 def run():
