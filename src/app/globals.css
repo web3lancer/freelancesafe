@@ -70,17 +70,19 @@ main {
 }
 
 .top-header {
-  background-color: white;
+  background-color: var(--paper);
   border-bottom: 1px solid #e5e7eb;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: var(--text-primary);
 }
 
 [data-theme='dark'] .top-header {
   background-color: var(--dark-paper);
   border-bottom: 1px solid #333;
+  color: var(--dark-text-primary);
 }
 
 /* Auth pages */
@@ -123,6 +125,7 @@ main {
 .btn-outline {
   border: 1px solid #d1d5db;
   background-color: white;
+  color: var(--text-primary);
 }
 
 .btn-outline:hover {
@@ -130,6 +133,7 @@ main {
 }
 
 [data-theme='dark'] .btn-outline {
+  background-color: transparent;
   border-color: rgba(255, 255, 255, 0.23);
   color: var(--dark-text-primary);
 }
@@ -197,3 +201,19 @@ main {
 .status-completed { color: var(--success); }
 .status-failed { color: var(--error); }
 .status-processing { color: var(--info); }
+
+.text-text-primary {
+  color: var(--text-primary) !important;
+}
+
+.text-text-secondary {
+  color: var(--text-secondary) !important;
+}
+
+.dark\:text-dark-text-primary {
+  color: var(--dark-text-primary) !important;
+}
+
+.dark\:text-dark-text-secondary {
+  color: var(--dark-text-secondary) !important;
+}

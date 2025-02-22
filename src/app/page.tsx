@@ -19,9 +19,9 @@ const HomePage = () => {
   return (
     <div className="min-h-screen bg-background text-text-primary dark:bg-dark-background dark:text-dark-text-primary">
       {/* Hero Section */}
-      <section className="section bg-gradient-to-r from-primary to-secondary text-white">
-        <header className="top-header">
-          <h1>FreelanceSafe</h1>
+      <section className="section bg-gradient-to-r from-primary to-secondary">
+        <header className="top-header bg-white dark:bg-dark-paper">
+          <h1 className="text-text-primary dark:text-dark-text-primary">FreelanceSafe</h1>
           <div>
             <button onClick={toggleTheme} className="btn btn-outline mr-2">
               {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
@@ -37,10 +37,10 @@ const HomePage = () => {
         
         <main className="p-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary inline-block text-transparent bg-clip-text">
+            <h1 className="text-5xl font-bold mb-6 text-white">
               Secure Freelance Payments & Escrow Management
             </h1>
-            <p className="text-xl mb-8">
+            <p className="text-xl mb-8 text-white/90">
               FreelanceSafe provides a secure platform for managing freelance payments
               with built-in escrow protection.
             </p>
@@ -56,7 +56,9 @@ const HomePage = () => {
       {/* Features Section */}
       <section className="section bg-paper dark:bg-dark-paper">
         <div className="container">
-          <h2 className="text-3xl font-bold text-center mb-12">Key Features</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-text-primary dark:text-dark-text-primary">
+            Key Features
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { title: 'Secure Payments', icon: '🔒', desc: 'Built-in escrow protection' },
