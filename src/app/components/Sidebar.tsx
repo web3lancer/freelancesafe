@@ -11,17 +11,20 @@ const Sidebar = () => {
   ];
 
   return (
-    <nav className="sidebar">
-      <div className="mb-8">
+    <nav className="sidebar elevation-2">
+      <div className="mb-8 px-4">
         <h1 className="text-xl font-bold">FreelanceSafe</h1>
       </div>
       
-      <ul className="space-y-2">
+      <ul className="space-y-1">
         {menuItems.map((item) => (
           <li key={item.path}>
-            <Link href={item.path} className="flex items-center p-2 hover:bg-gray-700 rounded">
+            <Link
+              href={item.path}
+              className="flex items-center px-4 py-3 hover:bg-white/10 rounded-lg transition-colors"
+            >
               <span className="mr-3">{item.icon}</span>
-              {item.label}
+              <span className="font-medium">{item.label}</span>
             </Link>
           </li>
         ))}
