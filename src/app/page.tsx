@@ -76,16 +76,37 @@ const HomePage = () => {
       {/* SDK Section */}
       <section className="section bg-background dark:bg-dark-background">
         <div className="container">
-          <h2 className="text-3xl font-bold text-center mb-12">Developer SDK</h2>
-          <div className="bg-paper p-8 rounded-lg elevation-1 dark:bg-dark-paper dark:elevation-1">
-            <pre className="bg-gray-900 text-white p-4 rounded">
-              pip install freelancesafe-sdk
-            </pre>
-            <div className="mt-6 flex justify-center">
-              <Link href="/docs" className="btn btn-primary">
-                View Documentation
-              </Link>
+          <h2 className="text-3xl font-bold text-center mb-12">Quick Start Guide</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-paper p-8 rounded-lg elevation-1 dark:bg-dark-paper dark:elevation-1">
+              <h3 className="text-xl font-bold mb-4">CLI Setup 🐍</h3>
+              <pre className="bg-gray-900 text-white p-4 rounded text-sm">
+                {`git clone freelancesafe
+cd freelancesafe/cli
+pip install -e .`}
+              </pre>
             </div>
+            <div className="bg-paper p-8 rounded-lg elevation-1 dark:bg-dark-paper dark:elevation-1">
+              <h3 className="text-xl font-bold mb-4">Web Setup 🌐</h3>
+              <pre className="bg-gray-900 text-white p-4 rounded text-sm">
+                {`cd freelancesafe/src
+pnpm install
+pnpm dev`}
+              </pre>
+            </div>
+            <div className="bg-paper p-8 rounded-lg elevation-1 dark:bg-dark-paper dark:elevation-1">
+              <h3 className="text-xl font-bold mb-4">Mobile Setup 📱</h3>
+              <pre className="bg-gray-900 text-white p-4 rounded text-sm">
+                {`cd freelancesafe/apps
+flutter pub get
+flutter run`}
+              </pre>
+            </div>
+          </div>
+          <div className="mt-6 flex justify-center">
+            <Link href="/docs" className="btn btn-primary">
+              View Full Documentation
+            </Link>
           </div>
         </div>
       </section>

@@ -16,28 +16,34 @@ FreelanceSafe is a modular and practical system for freelance payments and escro
 
 ## Getting Started 🚀
 
-### Python CLI 🐍
-
-Navigate to the `cli/` directory and install the dependencies:
+First, clone the repository:
 
 ```bash
-pip install -r requirements.txt
+git clone https://github.com/nathfavour/freelancesafe.git
+cd freelancesafe
+```
+
+### Python CLI 🐍
+
+```bash
+cd cli
+pip install -e .
 ```
 
 ### Next.js Web App 🌐
 
-Navigate to the `src/app/` directory and install the dependencies:
-
 ```bash
-npm install
+cd src
+pnpm install
+pnpm dev
 ```
 
 ### Flutter App 📱
 
-Navigate to the `apps/` directory and install the dependencies:
-
 ```bash
+cd apps
 flutter pub get
+flutter run
 ```
 
 ## Roadmap 🛣️
