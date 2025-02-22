@@ -19,15 +19,16 @@ const HomePage = () => {
   return (
     <div className="min-h-screen bg-background text-text-primary dark:bg-dark-background dark:text-dark-text-primary">
       {/* Hero Section */}
-      <section className="section bg-gradient-to-r from-primary to-secondary">
-        <header className="top-header bg-white dark:bg-dark-paper">
-          <h1 className="text-text-primary dark:text-dark-text-primary">FreelanceSafe</h1>
-          <div>
-            <button onClick={toggleTheme} className="btn btn-outline mr-2">
-              {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
+      <section className="section relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-90"></div>
+        <header className="relative top-header bg-white/95 dark:bg-dark-paper/95">
+          <h1 className="text-2xl font-bold text-primary dark:text-white">FreelanceSafe</h1>
+          <div className="flex gap-2">
+            <button onClick={toggleTheme} className="btn btn-outline">
+              {theme === 'light' ? '🌙' : '☀️'}
             </button>
             <Link href="/auth/signin">
-              <button className="btn btn-outline mr-2">Sign In</button>
+              <button className="btn btn-outline">Sign In</button>
             </Link>
             <Link href="/auth/signup">
               <button className="btn btn-primary">Sign Up</button>
@@ -35,7 +36,7 @@ const HomePage = () => {
           </div>
         </header>
         
-        <main className="p-8">
+        <div className="relative p-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl font-bold mb-6 text-white">
               Secure Freelance Payments & Escrow Management
@@ -45,18 +46,18 @@ const HomePage = () => {
               with built-in escrow protection.
             </p>
             <Link href="/auth/signup">
-              <button className="btn btn-primary text-lg px-8 py-3">
+              <button className="btn btn-primary bg-white text-primary hover:bg-white/90 text-lg px-8 py-3">
                 Get Started
               </button>
             </Link>
           </div>
-        </main>
+        </div>
       </section>
 
       {/* Features Section */}
-      <section className="section bg-paper dark:bg-dark-paper">
+      <section className="section bg-white dark:bg-dark-paper">
         <div className="container">
-          <h2 className="text-3xl font-bold text-center mb-12 text-text-primary dark:text-dark-text-primary">
+          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">
             Key Features
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
