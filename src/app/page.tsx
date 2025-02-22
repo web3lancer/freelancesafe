@@ -1,15 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
 const HomePage = () => {
+  const [theme, setTheme] = useState('light');
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  };
+
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background text-text-primary dark:bg-dark-background dark:text-dark-text-primary">
       {/* Hero Section */}
       <section className="section bg-gradient-to-r from-primary to-secondary text-white">
         <header className="top-header">
           <h1>FreelanceSafe</h1>
           <div>
+            <button onClick={toggleTheme} className="btn btn-outline mr-2">
+              {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
+            </button>
             <Link href="/auth/signin">
               <button className="btn btn-outline mr-2">Sign In</button>
             </Link>
@@ -38,7 +51,7 @@ const HomePage = () => {
       </section>
 
       {/* Features Section */}
-      <section className="section bg-paper">
+      <section className="section bg-paper dark:bg-dark-paper">
         <div className="container">
           <h2 className="text-3xl font-bold text-center mb-12">Key Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -47,10 +60,10 @@ const HomePage = () => {
               { title: 'Smart Contracts', icon: '📄', desc: 'Automated agreements' },
               { title: 'Cross-platform', icon: '🌐', desc: 'Web, mobile & CLI access' }
             ].map((feature) => (
-              <div key={feature.title} className="p-6 elevation-1 rounded-lg">
+              <div key={feature.title} className="p-6 elevation-1 rounded-lg dark:bg-dark-elevation-1">
                 <div className="text-4xl mb-4">{feature.icon}</div>
                 <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-                <p className="text-text-secondary">{feature.desc}</p>
+                <p className="text-text-secondary dark:text-dark-text-secondary">{feature.desc}</p>
               </div>
             ))}
           </div>
@@ -58,10 +71,10 @@ const HomePage = () => {
       </section>
 
       {/* SDK Section */}
-      <section className="section bg-background">
+      <section className="section bg-background dark:bg-dark-background">
         <div className="container">
           <h2 className="text-3xl font-bold text-center mb-12">Developer SDK</h2>
-          <div className="bg-paper p-8 rounded-lg elevation-1">
+          <div className="bg-paper p-8 rounded-lg elevation-1 dark:bg-dark-paper dark:elevation-1">
             <pre className="bg-gray-900 text-white p-4 rounded">
               pip install freelancesafe-sdk
             </pre>
@@ -75,7 +88,7 @@ const HomePage = () => {
       </section>
 
       {/* Download Apps Section */}
-      <section className="section bg-paper">
+      <section className="section bg-paper dark:bg-dark-paper">
         <div className="container">
           <h2 className="text-3xl font-bold text-center mb-12">Mobile Apps</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

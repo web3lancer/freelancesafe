@@ -11,13 +11,24 @@
   --text-primary: rgba(0, 0, 0, 0.87);
   --text-secondary: rgba(0, 0, 0, 0.6);
   --sidebar-width: 250px;
+  --dark-background: #121212;
+  --dark-paper: #1e1e1e;
+  --dark-text-primary: rgba(255, 255, 255, 0.87);
+  --dark-text-secondary: rgba(255, 255, 255, 0.6);
+}
+
+[data-theme='dark'] {
+  --background: var(--dark-background);
+  --paper: var(--dark-paper);
+  --text-primary: var(--dark-text-primary);
+  --text-secondary: var(--dark-text-secondary);
 }
 
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background-color: #f9fafb;
-  color: #111827;
+  background-color: var(--background);
+  color: var(--text-primary);
 }
 
 header, footer {
@@ -58,6 +69,11 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+[data-theme='dark'] .top-header {
+  background-color: var(--dark-paper);
+  border-bottom: 1px solid #333;
 }
 
 /* Auth pages */
