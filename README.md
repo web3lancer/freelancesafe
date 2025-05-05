@@ -1,6 +1,6 @@
 # FreelanceSafe 🚀✨
 
-FreelanceSafe is a modular and practical system for freelance payments and escrow management. Secure your freelance transactions with ease! 💼🔒(work in progress). it is a real life application of cardano that has the potential to reduce dependence on centralized payment processors and ease the life of billions of remote workers.
+FreelanceSafe is a modular and practical system for freelance payments and escrow management. Secure your freelance transactions with ease! 💼🔒(work in progress). it is a real life application of cardano that has the potential to reduce dependence on centralized payment processors and ease the life of billions of remote workers. All while ensuring security and reliability on a decentralized foundation.
 
 ## Features 🌟
 
