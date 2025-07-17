@@ -1,25 +1,38 @@
 # FreelanceSafe 🚀✨
 
-FreelanceSafe is a modular and practical system for freelance payments and escrow management. Secure your freelance transactions with ease! 💼🔒(work in progress). it is a real life application of cardano that has the potential to reduce dependence on centralized payment processors and ease the life of billions of remote workers. All while ensuring security and reliability on a decentralized foundation.
+FreelanceSafe is a modular, practical system for freelance payments and escrow management.  
+Secure your freelance transactions with ease! 💼🔒
+
+This project demonstrates a real-world application of Cardano, reducing dependence on centralized payment processors and improving the lives of billions of remote workers. All payments are secured and reliable on a decentralized foundation.
 
 ## Features 🌟
 
-- 🔒 **Secure Payments**: Ensure your payments are safe with built-in escrow protection.
-- 📜 **Escrow Management**: Manage your escrow accounts effortlessly.
-- 📄 **Contract Deployment**: Deploy smart contracts seamlessly.
+1. 🔒 **Secure Payments**  
+   Built-in escrow protection ensures your payments are always safe.
+
+2. 📜 **Escrow Management**  
+   Effortlessly manage your escrow accounts.
+
+3. 📄 **Contract Deployment**  
+   Seamlessly deploy smart contracts for freelance agreements.
 
 ## Structure 🏗️
 
-- 🐍 **Python CLI**: Core SDK & Next.js Proxy API
-- 🌐 **Next.js Web App**: Frontend Client & CLI Proxy API
-- 📱 **Flutter Mobile/Desktop App**: Frontend Client
+1. 🐍 **Python CLI**  
+   Core SDK and Next.js Proxy API.
+
+2. 🌐 **Next.js Web App**  
+   Frontend client and CLI proxy API.
+
+3. 📱 **Flutter Mobile/Desktop App**  
+   Cross-platform frontend client.
 
 ## Getting Started 🚀
 
 First, clone the repository:
 
 ```bash
-git clone https://github.com/nathfavour/freelancesafe.git
+git clone https://github.com/web3lancer/freelancesafe.git
 cd freelancesafe
 ```
 
@@ -50,21 +63,21 @@ flutter run
 
 ### Q4 2023 🎯
 
-- [ ] 🚀 **Launch Beta Version**
-- [ ] 📝 **User Feedback Collection**
-- [ ] 📢 **Initial Marketing Campaign**
+1. 🚀 **Launch Beta Version**
+2. 📝 **Collect User Feedback**
+3. 📢 **Initial Marketing Campaign**
 
 ### Q1 2024 🎯
 
-- [ ] 🎉 **Full Product Launch**
-- [ ] 📱 **Mobile App Release**
-- [ ] 💳 **Expand Payment Integrations**
+1. 🎉 **Full Product Launch**
+2. 📱 **Mobile App Release**
+3. 💳 **Expand Payment Integrations**
 
 ### Q2 2024 🎯
 
-- [ ] 🤖 **Introduce AI-based Contract Analysis**
-- [ ] 🌐 **Multi-language Support**
-- [ ] 📊 **Advanced Reporting Tools**
+1. 🤖 **Introduce AI-based Contract Analysis**
+2. 🌐 **Multi-language Support**
+3. 📊 **Advanced Reporting Tools**
 
 ## License 📄
 
