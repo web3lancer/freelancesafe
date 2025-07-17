@@ -36,13 +36,5 @@ validator placeholder {
     todo @"propose logic goes here"
   }
 
-  // // If needs be, remove any of unneeded handlers above, and use:
-  //
-  // else(_ctx: ScriptContext) {
-  //   todo @"fallback logic if none of the other purposes match"
-  // }
-  //
-  // // You will also need an additional import:
-  // //
-  // // use cardano/script_context.{ScriptContext}
+
 }
